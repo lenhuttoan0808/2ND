@@ -46,75 +46,68 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Xác Nhận Xuất Kho</h4>
+                        <h4 class="title">Add Product</h4>
                     </div>
                     <div class="content">
                         ${message}
                         <form:form action="/admin/editorder" method="post" modelAttribute="orderDetails">
-                            <form:input path="id" class="form-control" name="id" type="hidden"></form:input>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-5">
                                     <div class="form-group">
-                                        <label>
-                                            Mã Oder </label>
-                                        <form:input type="text" path="order.id" class="form-control" required="true" readonly="true"></form:input>
+                                        <label>Mã hàng hóa</label>
+                                        <form:input path="id" class="form-control" name="id"></form:input>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Tên Người Đặt Hàng</label>
-                                        <form:input type="text" path="order.receiver" class="form-control" required="true" readonly="true"></form:input>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Địa Chỉ</label>
-                                        <form:input type="text" path="order.address" class="form-control" required="true" readonly="true"></form:input>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Số Điện Thoại Người Nhận</label>
-                                        <form:input type="text" path="order.description" class="form-control" required="true" readonly="true"></form:input>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Discount</label>
-                                        <form:input path="discount" class="form-control" required=""></form:input>
+                                        <label>Discount
+
+                                        </label>
+                                        <form:input path="discount" class="form-control" required="true"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Số lượng</label>
-                                        <form:input path="quantity" class="form-control" required="true" readonly="true"></form:input>
+                                        <form:input path="quantity" class="form-control"></form:input>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            Tổng tiền</label>
+                                        <form:input type="text"  path="totalPrice" class="form-control"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>
-                                            Thành Tiên</label>
-                                        <form:input type="text"  path="totalPrice" class="form-control" readonly="true"></form:input>
+                                        <label>Đơn giá</label>
+                                        <form:input type="text"  path="unitPrice" class="form-control"></form:input>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>
+                                            Mã Oder </label>
+                                        <form:input type="text" path="order.id" class="form-control" required="true"></form:input>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Product ID</label>
-                                        <form:input type="text" path="product.id" class="form-control" required="true" readonly="true"></form:input>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>Product Name</label>
-                                        <form:input type="text" path="product.name" class="form-control" required="true" readonly="true"></form:input>
+                                        <label>Product</label>
+                                        <form:input type="text" path="product.id" class="form-control" required="true"></form:input>
+
+
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -123,9 +116,14 @@
                                         <label>Loại</label>
                                         <form:select
                                                      itemValue="status" path="status" class="form-control">
-                                            <form:option value="Thanh Toán">Đã Xuất Kho</form:option>
-                                            <form:option value="Thanh Toán">Hủy Đơn</form:option>
+                                            <form:option value="Thanh Toán">Thanh Toán</form:option>
+                                            <form:option value="Thanh Toán">Đang Giao Dịch</form:option>
+
                                         </form:select>
+
+
+
+
                                     </div>
 
                                 </div>
@@ -133,40 +131,13 @@
                             </div>
 
 
-                            <button type="submit" class="btn btn-info btn-fill pull-right">Confirm</button>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                             <div class="clearfix"></div>
                         </form:form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/131132806_2308029716030376_5673469639334529302_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=9wPualGGpZoAX-O3jqz&_nc_ht=scontent-sin6-1.xx&oh=277c6225de2b9bf2e1c2d26d371b4065&oe=60F28DF8"
-                             alt="..." height="300" width="300"/>
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                            <a href="#">
-                                <img class="avatar border-gray" src="/resources/assets/img/faces/admin.jpg"
-                                     alt="..."/>
 
-                                <h4 class="title">Ở ĐÂY CÓ 2HAND<br/>
-                                    <small>@PLESBUY.2ND</small>
-                                </h4>
-                            </a>
-                        </div>
-                        <p class="description text-center"> "Hi Shopkeeper <br>
-                            What does a hero truly need? <br>
-                            Strength ? Agility ? Intelligence ?
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <button href="https://www.facebook.com/PLESBUY.2ND/" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>

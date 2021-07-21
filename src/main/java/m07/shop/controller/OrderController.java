@@ -22,52 +22,5 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/")
 public class OrderController extends  BaseController {
-    @Autowired
-    OrderRepository orderRepository;
-
-    @Autowired
-    OrderDetailRepository orderDetailRepository;
-
-//    @RequestMapping(value = "/listordercus")
-//    public  String showlisstcus(Model model){
-//        return "listordercus";
-//    }
-
-    //product by category
-    @RequestMapping(value = "/listordercus")
-    public String showorderbycus(Model model, @RequestParam("customerId") String customerId , HttpServletRequest request) {
-
-        HttpSession httpSession = request.getSession();
-        Object s = httpSession.getAttribute("SPRING_SECURITY_CONTEXT");
-        if (s != null) {
-            SecurityContextImpl context = (SecurityContextImpl) s;
-            String loggedInUser = context.getAuthentication().getName();
-            model.addAttribute("id", loggedInUser);
-        }
-
-        List<Order> orderList =
-                (List<Order>) orderRepository.listoderbycus(customerId);
-        model.addAttribute("listordercus", orderList);
-        return "listordercus";
-    }
-
-
-
-    @RequestMapping(value = "/productbycustome")
-    public String productbycustomer12(Model model, @RequestParam("customerId") String customerId , HttpServletRequest request) throws SQLException {
-
-        HttpSession httpSession = request.getSession();
-        Object s = httpSession.getAttribute("SPRING_SECURITY_CONTEXT");
-        if (s != null) {
-            SecurityContextImpl context = (SecurityContextImpl) s;
-            String loggedInUser = context.getAuthentication().getName();
-            model.addAttribute("id", loggedInUser);
-        }
-
-        List<Object[]> listTestpro =  orderDetailRepository.productwherecustomer(customerId);
-//        System.out.println("id = " + listTestpro.get(0)[0] + "productId = " + listTestpro.get(0)[1]);
-        model.addAttribute("productbycustomer",listTestpro);
-        return "productbycustome";
-    }
 
 }

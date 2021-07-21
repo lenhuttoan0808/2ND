@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Ping Shop</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -36,6 +36,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="checkout">
         <div class="container">
             <h2> <span>Cảm Ơn Bạn Đã Mua Hàng. Mã Đơn Hàng Của Bạn Là : ${orderId}</span></h2>
+
+
+
+
         </div>
     </div>
 

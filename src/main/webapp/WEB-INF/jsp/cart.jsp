@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Ping Shop</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -44,6 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <th>Product Images</th>
                         <th>Quality</th>
                         <th>Product Name</th>
+
                         <th>Price</th>
                         <th>Remove</th>
                     </tr>
@@ -105,10 +106,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <div class="checkout-left">
                     <div class="checkout-left-basket">
-                        <h4>Your to basket</h4>
+                        <h4>Continue to basket</h4>
                         <c:forEach items="${carts}" var="cart">
                         <ul>
                             <li>${cart.product.name} <i>-</i> <span>${cart.product.unitPrice} </span></li>
+
+
                         </ul>
                         </c:forEach>
                     </div>

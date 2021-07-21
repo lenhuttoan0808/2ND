@@ -5,7 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Ping Shop</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -53,18 +53,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <form:form action="/checkout" method="post" modelAttribute="order">
                 <form:input path="receiver" placeholder="Tên Người nhận"  required="required"></form:input>
                 <form:input path="address" placeholder="Địa Chỉ..." required=" "></form:input>
-                <form:input path="description"  placeholder="Số Điện THoại Người Nhận" required="true" pattern="^((09|03|07|08|05)+([0-9]{8})\b)$" title="Số điện thoại của bạn phải bao gồm 10 số và bắt đầu bằng các đầu số, 09, 08, 07, 05, 03"></form:input>
+
 
 
                 <h6><spring:message code="INFORMATION" text="default text"/></h6>
 
-                <form:input type="date" path="requireDate" class="form-control"
-                            required="true"></form:input>
+                <form:input path="requireDate" placeholder="Ngày Giao Hàng" required="required"></form:input>
+                <form:input path="description"  placeholder="Mô Tả" required="required"></form:input>
 
 
 
-
-                <input href="/checkout_succes" type="submit" value="Check Out">
+                <input type="submit" value="Check Out">
             </form:form>
         </div>
         <div class="register-home">

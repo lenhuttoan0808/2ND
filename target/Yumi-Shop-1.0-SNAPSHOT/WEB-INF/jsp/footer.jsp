@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Title</title>
 </head>
 <body>
 <!-- //new -->
@@ -26,21 +26,30 @@
                 <ul class="info">
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a>
+                    </li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
                 <h3>Category</h3>
                 <ul class="info">
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/product">Household</a></li>
-                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Product
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal
                         Care</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged
+                        Foods</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
                 </ul>
             </div>
             <div class="col-md-3 w3_footer_grid">
                 <h3>Profile</h3>
                 <ul class="info">
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/product">Store</a></li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/viewCart">My Cart</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/login">Login</a></li>
                     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/registered">Create Account</a>
                     </li>

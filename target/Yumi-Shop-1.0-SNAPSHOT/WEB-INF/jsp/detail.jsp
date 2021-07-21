@@ -59,8 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="w3agile_description">
                     <h4>Description :</h4>
                     <p>${product.description}</p>
-                    <a></a>
-                    <a> Ngày Về  <p>${product.productDate}</p></a>
+                    <a> Ngày sản xuất  <p>${product.productDate}</p></a>
                 </div>
                 <div class="snipcart-item block">
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">

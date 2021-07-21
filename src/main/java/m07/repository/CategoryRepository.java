@@ -10,7 +10,8 @@ import java.util.List;
 
 public interface CategoryRepository extends CrudRepository<Category, Integer> {
 
-
+    @Query(value = "select  *from categories where supplierId = ? ", nativeQuery = true)
+    public List<Category> findBySupplier(@Param("id") int id);
 
 }
 

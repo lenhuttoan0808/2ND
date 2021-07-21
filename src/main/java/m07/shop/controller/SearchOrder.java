@@ -18,48 +18,5 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class SearchOrder extends BaseController{
-    @Autowired
-    OrderDetailRepository orderDetailRepository;
-
-    @Autowired
-    OrderRepository orderRepository;
-
-
-
-
-    @RequestMapping(value = "/searchOrder")
-    public String showseachr(Model model , HttpServletRequest request) {
-
-        HttpSession httpSession = request.getSession();
-        Object s = httpSession.getAttribute("SPRING_SECURITY_CONTEXT");
-        if (s != null) {
-            SecurityContextImpl context = (SecurityContextImpl) s;
-            String loggedInUser = context.getAuthentication().getName();
-            model.addAttribute("id", loggedInUser);
-        }
-
-        return "searchOrder";
-    }
-
-    @RequestMapping(value = "/searchOrder" , method = RequestMethod.POST)
-    public String timkiem( @RequestParam("id") int id, Model model) {
-
-        List<OrderDetail> orderDetails =
-                (List<OrderDetail>) orderDetailRepository.searchOrder(id);
-        model.addAttribute("orderDetails", orderDetails);
-
-        if (null != orderDetails) {
-            model.addAttribute("message", "Đơn Hàng Không Tồn tại");
-            model.addAttribute("orderDetails",orderDetails);
-        } else {
-            model.addAttribute("message", "Mã Đơn Hàng Của Bạn Là");
-            model.addAttribute("orderDetails", orderDetails);
-        }
-
-        return "listOrder";
-    }
-
-
-
 
 }

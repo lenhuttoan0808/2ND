@@ -59,7 +59,7 @@
                 <li>
                     <a href="/admin/order">
                         <i class="pe-7s-bell"></i>
-                        <p>Quản Lý Đơn Hàng</p>
+                        <p>Đơn Hàng Mới</p>
                     </a>
                 </li>
             </ul>

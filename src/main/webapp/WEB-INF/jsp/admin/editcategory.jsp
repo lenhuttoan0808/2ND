@@ -67,7 +67,7 @@
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label>Category Name</label>
-                                    <form:input path="name" class="form-control" required="true"></form:input>
+                                    <form:input path="name" class="form-control"></form:input>
                                     <form:errors path="name"/>
 
                                 </div>

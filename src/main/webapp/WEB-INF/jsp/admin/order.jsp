@@ -43,30 +43,32 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="header">
-                        <h4 class="title">Báo Cáo Đơn Hàng</h4>
+                        <h4 class="title">Báo Cáo Đơn Đặt Hàng</h4>
                         <%--<p class="category">Here is a subtitle for this table</p>--%>
                     </div>
                     <div class="content table-responsive table-full-width">
                         <table class="table table-hover table-striped">
                             <thead>
-                            <th>Order Id</th>
-                            <th>Good ID</th>
-                            <th>Tên Người Nhận</th>
-                            <th>Số điện thoại người nhận</th>
-                            <th>Giá tiền</th>
+
+                            <th>Id</th>
+                            <th>Tên Sản Phẩm</th>
                             <th>Trạng Thái</th>
-                            <th></th>
+
+                            <th>Giá cao nhất	</th>
+
                             </thead>
                             <tbody>
                             <c:forEach items="${orderDetails}" var="orderDetails">
                                 <tr>
                                     <td>${orderDetails.order.id}</td>
-                                    <td>${orderDetails.product.id}</td>
-                                    <td>${orderDetails.order.receiver}</td>
-                                    <td>${orderDetails.order.description}</td>
-                                    <td>${orderDetails.totalPrice}</td>
+                                    <td>${orderDetails.product.name}</td>
                                     <td>${orderDetails.status}</td>
-                                    <td><a href="/admin/editorder?id=${orderDetails.id}">Xác Nhận</a></td>
+                                    <td>${orderDetails.totalPrice}</td>
+                                    <td><a href="/admin/editorder?id=${orderDetails.id}"> Edit</a></td>
+
+
+
+
                                 </tr>
                             </c:forEach>
                             </tbody>

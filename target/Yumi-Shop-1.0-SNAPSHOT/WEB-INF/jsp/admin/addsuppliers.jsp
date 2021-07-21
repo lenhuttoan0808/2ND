@@ -51,13 +51,15 @@
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <label>SĐT</label>
-                                        <form:input path="phone" class="form-control" required="true" pattern="^((09|03|07|08|05)+([0-9]{8})\b)$" title="Số điện thoại của bạn phải bao gồm 10 số và bắt đầu bằng các đầu số, 09, 08, 07, 05, 03"></form:input>
+                                        <form:input path="phone" class="form-control"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <form:input path="email" class="form-control" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" title="Hãy nhập gmail theo định dạng Example@gmail.com" required="true"></form:input>
+                                        <label>Email
+
+                                        </label>
+                                        <form:input path="email" class="form-control"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -75,7 +77,7 @@
                                     <div class="form-group">
                                         <label>
                                            Name</label>
-                                        <form:input path="name" class="form-control" required="true"></form:input>
+                                        <form:input path="name" class="form-control"></form:input>
                                     </div>
                                 </div>
                                 <%--<div class="col-md-6">--%>
@@ -95,34 +97,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/131132806_2308029716030376_5673469639334529302_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=9wPualGGpZoAX-O3jqz&_nc_ht=scontent-sin6-1.xx&oh=277c6225de2b9bf2e1c2d26d371b4065&oe=60F28DF8"
-                             alt="..." height="300" width="300"/>
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                            <a href="#">
-                                <img class="avatar border-gray" src="/resources/assets/img/faces/admin.jpg"
-                                     alt="..."/>
 
-                                <h4 class="title">Ở ĐÂY CÓ 2HAND<br/>
-                                    <small>@PLESBUY.2ND</small>
-                                </h4>
-                            </a>
-                        </div>
-                        <p class="description text-center"> "Hi Shopkeeper <br>
-                            What does a hero truly need? <br>
-                            Strength ? Agility ? Intelligence ?
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <button href="https://www.facebook.com/PLESBUY.2ND/" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

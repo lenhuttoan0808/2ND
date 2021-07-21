@@ -1,11 +1,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="select" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
-<html lang="vi">
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
-    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
     <meta charset="utf-8"/>
     <link rel="icon" type="image/png" href="/resources/assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -57,13 +57,15 @@
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <label>Tên Hàng</label>
-                                        <form:input path="name" class="form-control" required="true"></form:input>
+                                        <form:input path="name" class="form-control"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Giá</label>
-                                        <form:input path="unitPrice" class="form-control" required="true" pattern="^[0-9]*$" title="Input number only"></form:input>
+                                        <label>Giá
+
+                                        </label>
+                                        <form:input path="unitPrice" class="form-control" required="true"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -83,14 +85,14 @@
                                         <label>
                                             Giảm giá</label>
                                         <form:input type="number" path="discount" class="form-control"
-                                                    min="0" required="true"></form:input>
+                                                    min="0"></form:input>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Số lượng</label>
                                         <form:input type="number" path="quantity" class="form-control"
-                                                    min="1" required="true"></form:input>
+                                                    min="0"></form:input>
                                     </div>
                                 </div>
                             </div>
@@ -111,9 +113,33 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
 
+<!--
+                                        <script type="text/javascript">
+                                            $(document).ready(function(){
+
+                                                $('#comboboxSupplier').on('change', function(){
+                                                    var supplierId = $(this).val();
+                                                    $.ajax({
+                                                        type: 'GET',
+                                                        url: '${pageContext.request.contextPath }loadCategotyBySupplier/' + supplierId,
+                                                        success: function(result) {
+                                                            var result = JSON.parse(result);
+                                                            var s = '';
+                                                            for(var i = 0; i < result.length; i++) {
+                                                                s += '<option value="' + result[i].id + '">' + result[i].name + '</option>';
+                                                            }
+                                                            $('#comboboxCategory').html(s);
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        </script>
+-->
+
                                         <label>Nhà Cung Cấp</label>
                                         <form:select items="${supplierList}" itemLabel="name"
                                                      itemValue="id" path="supplier.id" class="form-control" onchange="">
+
                                         </form:select>
 
                                     </div>
@@ -142,7 +168,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Mô Tả</label>
-                                        <form:input path="description" class="form-control" pattern="^{50,}$" title="Have at least 50 characters" required="true"></form:input>
+                                        <form:input path="description" class="form-control"></form:input>
                                     </div>
                                 </div>
                             </div>
@@ -161,34 +187,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.6435-9/131132806_2308029716030376_5673469639334529302_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=9wPualGGpZoAX-O3jqz&_nc_ht=scontent-sin6-1.xx&oh=277c6225de2b9bf2e1c2d26d371b4065&oe=60F28DF8"
-                             alt="..." height="300" width="300"/>
-                    </div>
-                    <div class="content">
-                        <div class="author">
-                            <a href="#">
-                                <img class="avatar border-gray" src="/resources/assets/img/faces/admin.jpg"
-                                     alt="..."/>
 
-                                <h4 class="title">Ở ĐÂY CÓ 2HAND<br/>
-                                    <small>@PLESBUY.2ND</small>
-                                </h4>
-                            </a>
-                        </div>
-                        <p class="description text-center"> "Hi Shopkeeper <br>
-                            What does a hero truly need? <br>
-                            Strength ? Agility ? Intelligence ?
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="text-center">
-                        <button href="https://www.facebook.com/PLESBUY.2ND/" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>

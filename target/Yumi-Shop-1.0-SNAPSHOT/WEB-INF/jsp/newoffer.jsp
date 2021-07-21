@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Title</title>
 </head>
 <body>
 <div class="newproducts-w3agile">

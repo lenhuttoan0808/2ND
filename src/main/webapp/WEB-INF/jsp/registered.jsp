@@ -1,10 +1,16 @@
-
+<%--
+  Created by IntelliJ IDEA.
+  User: Nhom6pro
+  Date: 1/23/2018
+  Time: 9:53 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Ping Shop</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -39,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="breadcrumbs">
     <div class="container">
         <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-            <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+            <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
             <li class="active">Register Page</li>
         </ol>
     </div>
@@ -52,31 +58,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="login-form-grids">
             <h5><spring:message code="Profile" text="default text"/></h5>
             <form:form action="/registered" method="post" modelAttribute="customer">
-                <form:input path="fullname" placeholder="Full name" required="true"></form:input>
+                <form:input path="fullname" placeholder="Full name" required=" "></form:input>
                 <label></label>
                 <input accept="image/*" name="file" type="file" id="files" placeholder="Avata" class="form-control" required="true">
                 <img id="image" width="100" height="100"/>
+
                 <script>
                     document.getElementById('files').onchange = function () {
                         var src = URL.createObjectURL(this.files[0])
                         document.getElementById('image').src = src
                     }
                 </script>
-                <h6><spring:message code="Login" text="default text"/></h6>
 
-                <form:input path="id" placeholder="Tên Đăng Nhập" required="true" pattern="^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$" title="Username must be written with no accents from 8-20 characters, must not be repeated or marked with '_' or '.' at the end or beginning of the username eg: Example_23, Example.32"></form:input>
-                <form:input type = "password" path="password" placeholder="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$" title="Your password must be between 8-32 characters including at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character" required="true"></form:input>
-                <form:input  type = "email" path="email" placeholder="email" pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$" title="Please enter gmail in the format Example@gmail.com" required="true"></form:input>
+
+
+                     <h6><spring:message code="Login" text="default text"/></h6>
+
+                <form:input path="id" placeholder="Tên Đăng Nhập" required=" "></form:input>
+                <form:input type = "password" path="password" placeholder="password" required=" "></form:input>
+
+                <form:input  type = "email" path="email" placeholder="email" required=" "></form:input>
                 <div class="register-check-box">
                     <div class="check">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" required="true" title="You need to agree to the terms and service"><i> </i>I accept the <a href="/">terms and conditions</a></label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
                     </div>
                 </div>
                 <input type="submit" value="Register">
             </form:form>
         </div>
         <div class="register-home">
-            <a href="/">Home</a>
+            <a href="index.html">Home</a>
         </div>
     </div>
 </div>

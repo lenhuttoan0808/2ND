@@ -4,7 +4,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>2nd Shop</title>
+    <title>Title</title>
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
     <!-- Bootstrap -->
